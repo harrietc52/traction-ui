@@ -1,10 +1,23 @@
 <template>
-  <tr>
-    <td><input class="selected" type="checkbox" v-model="selected" /></td>
-    <td>{{ id }}</td>
-    <td>{{ name }}</td>
-    <td>{{ species }}</td>
-  </tr>
+  <!-- <div> -->
+    <tr @click="show = !show">
+      <td><input class="selected" type="checkbox" v-model="selected" /></td>
+      <td>{{ id }}</td>
+      <td>{{ name }}</td>
+      <td>{{ species }}</td>
+      <td colspan="7" v-if="show">
+        <div>
+            ACCORDION
+        </div>
+      </td>
+    </tr>
+
+    <!-- <tr colspan="7" v-if="show">
+      <div>
+          ACCORDION
+      </div>
+    </tr>
+  </div> -->
 </template>
 
 <script>
@@ -24,7 +37,8 @@ export default {
   },
   data () {
     return {
-      selected: false
+      selected: false,
+      show: false
     }
   },
   methods: {
