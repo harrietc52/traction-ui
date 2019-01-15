@@ -5,11 +5,11 @@
       <td>{{ id }}</td>
       <td>{{ name }}</td>
       <td>{{ species }}</td>
-      <td colspan="7" v-if="show">
+      <!-- <td colspan="7" v-if="show">
         <div>
             ACCORDION
         </div>
-      </td>
+      </td> -->
     </tr>
 
     <!-- <tr colspan="7" v-if="show">
