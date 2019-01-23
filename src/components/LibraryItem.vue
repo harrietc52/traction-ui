@@ -1,11 +1,26 @@
 <template>
-  <tr>
-    <td><input class="selected" type="checkbox" v-model="selected" /></td>
-    <td>{{ id }}</td>
-    <td>{{ sampleName }}</td>
-    <td>{{ barcode }}</td>
-    <td>{{ state }}</td>
-  </tr>
+  <!-- <div> -->
+
+    <tr @click="show = !show">
+      <td><input class="selected" type="checkbox" v-model="selected" /></td>
+      <td>{{ id }}</td>
+      <td>{{ sampleName }}</td>
+      <td>{{ barcode }}</td>
+      <td>{{ state }}</td>
+      <td v-if="show">
+        <div>
+            ACCORDION
+        </div>
+      </td>
+    </tr>
+
+    <!-- <tr v-if="show">
+      <td>
+          ACCORDION
+      </td>
+    </tr>
+  </div> -->
+
 </template>
 
 <script>
@@ -28,7 +43,8 @@ export default {
   },
   data () {
     return {
-      selected: false
+      selected: false,
+      show: false
     }
   },
   computed: {
