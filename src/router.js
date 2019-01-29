@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Reception from './views/Reception'
 import Samples from './views/Samples'
 import Libraries from './views/Libraries'
+import BootstrapTable from './views/BootstrapTable'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/libraries',
       name: 'Libraries',
       component: Libraries
+    },
+    {
+      path: '/bootstrapTable',
+      name: 'BootstrapTable',
+      component: BootstrapTable
     }
   ]
 })
