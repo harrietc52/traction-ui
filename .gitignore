@@ -29,3 +29,5 @@ yarn-error.log*
 # json-server files
 db.json
 routes.json
+
+/live/
