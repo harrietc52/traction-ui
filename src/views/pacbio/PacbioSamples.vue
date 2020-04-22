@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <alert ref='alert'></alert>
 
     <b-form-group label="Filter"
@@ -95,10 +95,17 @@
     <b-form-group label-cols-lg="1" label="Per Page" label-for="input-per-page">
       <b-form-input id="input-per-page" v-model="perPage" trim  class="w-25"></b-form-input>
     </b-form-group>
+  </div> -->
+
+  <div>
+    <apollo-example></apollo-example>
   </div>
 </template>
 
 <script>
+import ApolloExample from '@/components/ApolloExample'
+import gql from 'graphql-tag'
+
 import LibraryCreatePacbioModal from '@/components/LibraryCreatePacbioModal'
 import PacbioSampleMetadataModal from '@/components/PacbioSampleMetadataModal'
 import PrinterModal from '@/components/PrinterModal'
@@ -116,7 +123,12 @@ export default {
     LibraryCreatePacbioModal,
     PrinterModal,
     Alert,
-    PacbioSampleMetadataModal
+    PacbioSampleMetadataModal,
+    ApolloExample
+  },
+  apollo: {
+    hello: gql`{samples}`,
+    // samples
   },
   data () {
     return {

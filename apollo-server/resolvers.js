@@ -14,6 +14,7 @@ export default {
     hello: (root, { name }) => `Hello ${name || 'World'}!`,
     messages: (root, args, { db }) => db.get('messages').value(),
     uploads: (root, args, { db }) => db.get('uploads').value(),
+    samples: (root) => db.get('samples').value()
 
   },
 
